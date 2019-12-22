@@ -25,6 +25,8 @@ router.post("/", async (req, res) => {
   const token = user.generateAuthToken();
   res
     .header("x-auth-token", token)
+    // an additional (standard http) header. lets webserver whitelist the headers that the browser/client is allowed to access
+    .header("access-control-expose-headers", "x-auth-token")
     .send(_.pick(user, ["_id", "name", "email"]));
 });
 
