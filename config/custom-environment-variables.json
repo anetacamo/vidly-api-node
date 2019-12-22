@@ -1,4 +1,6 @@
 {
   "jwtPrivateKey": "vidly_jwtPrivateKey",
-  "db": "vidly_db"
+  "db": "vidly"
 }
+
+heroku config:set vidly_db=mongodb+srv://aneta:domazlice123@vidly-ci6c7.mongodb.net/Vidly?retryWrites=true&w=majority
